@@ -1,0 +1,47 @@
+[
+    {
+        "id": 0,
+        "request_detail": "Security system sensors are malfunctioning, could require Cat ID R890 for system integrity.",
+        "equipment_name": "Security System D",
+        "station_name": "Pickering A",
+        "date_condition_observed": "2023-03-15T14:25:43.511Z",
+        "spare_part_required": true,
+        "created_at": "2023-03-16T10:00:00.000Z"
+    },
+    {
+        "id": 1,
+        "request_detail": "Regular maintenance required for cooling system, please schedule a check-up.",
+        "equipment_name": "Cooling Fan D2",
+        "station_name": "Darlington",
+        "date_condition_observed": "2023-04-10T09:30:12.345Z",
+        "spare_part_required": false,
+        "created_at": "2023-04-11T08:45:00.000Z"
+    },
+    {
+        "id": 2,
+        "request_detail": "The gearbox is making unusual noises, probable need for Part G789 to address the issue.",
+        "equipment_name": "Gearbox 2",
+        "station_name": "Pickering B",
+        "date_condition_observed": "2023-02-22T13:20:55.789Z",
+        "spare_part_required": true,
+        "created_at": "2023-02-23T11:22:33.000Z"
+    },
+    {
+        "id": 3,
+        "request_detail": "Cooling fan efficiency has dropped, may need to order Part F123 for optimal performance.",
+        "equipment_name": "Cooling Fan A2",
+        "station_name": "Darlington",
+        "date_condition_observed": "2023-05-18T16:45:09.123Z",
+        "spare_part_required": true,
+        "created_at": "2023-05-19T14:00:00.000Z"
+    },
+    {
+        "id": 4,
+        "request_detail": "Circuit breaker tripping frequently, investigation required to prevent outage.",
+        "equipment_name": "Circuit Breaker B2",
+        "station_name": "Pickering A",
+        "date_condition_observed": "2023-01-05T10:15:30.654Z",
+        "spare_part_required": false,
+        "created_at": "2023-01-06T09:50:00.000Z"
+    }
+]
