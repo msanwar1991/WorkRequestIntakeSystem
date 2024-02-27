@@ -9,32 +9,54 @@ The Work Request Intake System is a project that aims to streamline the process 
 - Work request submission form
 - View previously submitted work requests
 - Modify attibutes of previously submitted work requests
-- Ability to
-- Communication channels for stakeholders
+- Generate a prediction for whether spare parts are going to be required for the work being requested
+- Ability to modify the work request details to re-generate prediction for spare parts
 
-## Installation
-1. Clone the repository: `git clone https://github.com/your-username/work-request-intake-system.git`
-2. Install the dependencies: `npm install`
-3. Configure the database connection in the `.env` file
-4. Start the application: `npm start`
+## How to run
+
+
+### First create a virtual environment:
+
+#### Using Venv:
+```
+python -m venv .workreq
+.workreq\Scripts\activate.bat
+pip install -r requirements.txt
+```
+
+### Next initialize the sqlite db
+```
+python init_db.py
+```
+
+### Run the streamlit application -- the app will be launched automatically in a browser
+```
+streamlit run main.py
+```
+
+### Additionally launch test for pattern analyzer
+```
+python .\text_pattern_analyzer_test.py
+```
+
+Desired output of the test script is:
+
+```
+Negative Examples: Matched 0/10
+Positive Examples: Matched 10/10
+Ran 2 tests in 0.003s
+OK
+```
 
 ## Usage
-1. Access the application through the browser at `http://localhost:3000`
-2. Register a new user account or log in with existing credentials
-3. Submit a new work request through the provided form
-4. Track the status of your work requests on the dashboard
-5. Communicate with stakeholders through the integrated messaging system
 
-## Contributing
-Contributions are welcome! If you would like to contribute to the Work Request Intake System, please follow these steps:
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and commit them: `git commit -m "Add your commit message"`
-4. Push your changes to the branch: `git push origin feature/your-feature-name`
-5. Submit a pull request
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
+* Go to http://localhost:8501 
+* Create a new Work Request submission by filling out the form and hitting 'Submit' button
+![Form to fill out work request submission ](images/image-1.png)
+* View previously submitted work requests under the section "Previous Work Requests" as shown below:
+![Previous Work Requests section](images/image-2.png)
+* To update previously submitted work request, expand the accordion. This allows to modify any previously submitted work request attributes or delete the work request as shown below:
+![Expand work request accordion to view details](images/image-3.png)
+* The 'Spare Part Required' is predicted as Yes or No through pattern matching. This prediction is updated for an existing work request any time the 'Request Details' are updated. 
 ## Contact
-For any inquiries or support, please contact the project team at [email@example.com](mailto:email@example.com).
+For any inquiries or support, please contact the author team at [this email](mailto:saleh.anwar@gmail.com).
