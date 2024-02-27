@@ -19,18 +19,22 @@ class TextPatternAnalyzer:
 
     def analyze_text(self, input_text):
         """Analyze new input text against the stored tokenized dataset."""
-        # Preprocess and tokenize the new input text
-        tokenized_input = [self.tokenize_text(self.preprocess_text(text)) for text in input_text]
+        try:
+            # Preprocess and tokenize the new input text
+            tokenized_input = [self.tokenize_text(self.preprocess_text(text)) for text in input_text]
 
-        # Find frequent patterns in the tokenized dataset
-        frequent_patterns = self.ps.frequent(self.min_frequency)
+            # Find frequent patterns in the tokenized dataset
+            frequent_patterns = self.ps.frequent(self.min_frequency)
 
-        # Filter the input based on the frequent patterns
-        matched_patterns = []
-        for _, pattern in frequent_patterns:
-            for text in tokenized_input:
-                if all(elem in text for elem in pattern):
-                    matched_patterns.append((' '.join(pattern), text))
+            # Filter the input based on the frequent patterns
+            matched_patterns = []
+            for _, pattern in frequent_patterns:
+                for text in tokenized_input:
+                    if all(elem in text for elem in pattern):
+                        matched_patterns.append((' '.join(pattern), text))
 
-        # Return matched patterns and their contexts in the new data
-        return matched_patterns
+            # Return matched patterns and their contexts in the new data
+            return matched_patterns
+        except Exception as e:
+            print(f"An error occurred during text analysis: {e}")
+            return []

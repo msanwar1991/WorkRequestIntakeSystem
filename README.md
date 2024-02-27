@@ -14,6 +14,7 @@ The Work Request Intake System is a project that aims to streamline the process 
 
 ## How to run
 
+Note: This has been tested with Python 3.10.11 only
 
 ### First create a virtual environment:
 
@@ -24,10 +25,11 @@ python -m venv .workreq
 pip install -r requirements.txt
 ```
 
-### Next initialize the sqlite db
+### Next initialize the sqlite database
 ```
 python init_db.py
 ```
+Note: This populates the database with some sample work requests for demonstration purpose.
 
 ### Run the streamlit application -- the app will be launched automatically in a browser
 ```
@@ -58,5 +60,13 @@ OK
 * To update previously submitted work request, expand the accordion. This allows to modify any previously submitted work request attributes or delete the work request as shown below:
 ![Expand work request accordion to view details](images/image-3.png)
 * The 'Spare Part Required' is predicted as Yes or No through pattern matching. This prediction is updated for an existing work request any time the 'Request Details' are updated. 
+
+## Improvement Opportunities
+
+* Instead of pattern matching, other NLP techniques can be experimented with to predict whether spare parts are needed
+* Work Request can also be evaluated for urgency and given an urgency or priority score based on that
+* Large Language Models (LLM) can be used to analyze the work request and extract key pieces of information
+
+
 ## Contact
 For any inquiries or support, please contact the author team at [this email](mailto:saleh.anwar@gmail.com).
