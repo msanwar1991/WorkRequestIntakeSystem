@@ -33,7 +33,7 @@ Note: This populates the database with some sample work requests for demonstrati
 
 ### Run the streamlit application -- the app will be launched automatically in a browser
 ```
-streamlit run main.py
+streamlit run app.py
 ```
 
 ### Additionally launch test for pattern analyzer
